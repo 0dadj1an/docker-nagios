@@ -193,7 +193,7 @@ define command {\n\
 RUN echo "deb https://mirrors.tuna.tsinghua.edu.cn/grafana/apt/ jessie main" >> /etc/apt/sources.list && \
   curl https://packagecloud.io/gpg.key | sudo apt-key add - && \
   apt-get update && \
-  apt-get install -y --no-install-recommends grafana=${GRAFANA_VERSION} && \
+  apt-get install -y --no-install-recommends grafana=${GRAFANA_VERSION} --allow-unauthenticated && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
